@@ -59,7 +59,12 @@ const MyBootstrapAppPage = () => {
 
             <Container>
                 {showAlert && (
-                    <Alert variant="info" dismissible onClose={() => setShowAlert(false)}>
+                    <Alert
+                        variant="info"
+                        dismissible
+                        onClose={() => setShowAlert(false)}
+                        className={styles.alert}
+                    >
                         Welcome to our application! Check out our new features.
                     </Alert>
                 )}
@@ -157,7 +162,9 @@ const MyBootstrapAppPage = () => {
                                 <Card.Text>
                                     Discover our amazing features and boost your productivity today!
                                 </Card.Text>
-                                <Button variant="outline-primary">Learn More</Button>
+                                <Button variant="outline-primary" className={styles.button}>
+                                    Learn More
+                                </Button>
                             </Card.Body>
                             <Card.Footer className="text-muted">
                                 Last updated 3 mins ago
